@@ -20,7 +20,14 @@ Exp 3: Reading vs. color judgment: Subjects performed a reading or a color judgm
 ## Neccessary packages 
 
 ## Univariate Analyses:
-- extract_betas_emoji_noCongruence.m 
+### Exp 2: fMRI adaptation
+- [extract_betas_adaptation_merged.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/extract_betas_adaptation_merged.m)
+- [extract_betas_adaptation_merged_postHoc.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/extract_betas_adaptation_merged_postHoc.m)
+### Exp 3: reading vs. color judgement
+- [extract_betas_emoji_noCongruence.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/extract_betas_adaptation_merged.m)
+retrieves betas for each ROI and participant; runs a repeated measure ANOVA with 2 Factors (Task: reading vs. color judgement, Stimulus: emojis vs. text)
+- [extract_betas_emoji_noCongruence_postHoc.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/extract_betas_emoji_noCongruence_postHoc.m)
+runs a tukey-kramer post-hoc test on the univarate analyses of experiment 3 
 
 ## ROI creation
 
