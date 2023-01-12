@@ -19,6 +19,8 @@ Exp 3: Reading vs. color judgment: Subjects performed a reading or a color judgm
 
 ## Neccessary packages 
 
+## Behavioral Analyses 
+- [final_behavior_exp1_time.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/final_behavior_exp1_time.m) calculates performance (hit rate and 
 ## Univariate Analyses:
 ### Exp 2: fMRI adaptation
 - [extract_betas_adaptation_merged.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/extract_betas_adaptation_merged.m)
@@ -30,5 +32,8 @@ retrieves betas for each ROI and participant; runs a repeated measure ANOVA with
 runs a tukey-kramer post-hoc test on the univarate analyses of experiment 3 
 
 ## ROI creation
-
+- [load_and_save_volume_ROIs.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/load_and_save_volume_ROIs.m)
+- [makeROIdiskGray.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/makeROIdiskGray.m)
+- [roi_size_emoji.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/roi_size_emoji.m)
+## Multivariate Analyses
 
