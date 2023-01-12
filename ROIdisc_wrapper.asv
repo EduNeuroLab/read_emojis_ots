@@ -1,0 +1,29 @@
+%This script creates disks of all chosen ROIs for all participants 
+%The disk size chosen here is equivalent to the average size of the ROI 
+%The disk ROIs were used for the MVPAs
+
+clear all;
+ExpDir=fullfile('/oak/stanford/groups/kalanit/biac2/kgs/projects/emoji/data/');
+
+%only choose session of the participants that have the 
+% % 
+sessions={'01_hk_emoji_06521' '02_cc_fLOC_021821' '03_EK29_fLOC_030521'...
+'05_IK30_fLOC_030421' '06_KT30_fLOC_031121' '07_GP21_fLOC_051221'...
+ '10_HL27_fLOC_0551821' '11_CS63_fLOC_051821' '12_SCW23_fLOC_060321'...
+ '13_GN23_fLOC_062121' '14_MW28_fLOC_070821' '15_MM21_fLOC_071921'...
+ '16_ST22_fLOC_070821' '17_JL21_fLOC_072021' '18_HJ26_fLOC_073021'}
+%  
+rois={'rh_pOTS_fLOC3_words_vs_all'}
+
+for s = 1:length(sessions)
+    cd(fullfile(ExpDir,sessions{s}));
+    
+for r=1:length(rois) 
+    roi=rois(r);       
+    name=strsplit(roi{1},'.')
+    hG = initHiddenGray(5,1,roi);
+    hG2=makeROIdiskGray(hG,[7.5],strcat(name{1,1},'_disk_75mm.mat'),[],[],'roi')
+%  [gray,ROI] = makeROIdiskGray(gray, [radius], [name], [select], [color], [grayCoordStart],[addFlag])
+    saveROI(hG2,hG2.ROIs(hG2.selectedROI),0);
+end
+end
