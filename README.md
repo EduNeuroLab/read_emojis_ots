@@ -18,16 +18,26 @@ Exp 2:  fMRI adaptation : 2 pairs of images were presented, whereas each pair fo
 Exp 3: Reading vs. color judgment: Subjects performed a reading or a color judgment task on compound words, formed either from text or emoji stimuli.<br />
 
 ## Neccessary packages 
+- [Freesurfer](https://surfer.nmr.mgh.harvard.edu/) for segmenting the anatomical brain volume of each participant 
+- [ITKGray](http://web.stanford.edu/group/vista/cgi-bin/wiki/index.php/ItkGray) manual correction and surface reconstruction 
+- [mrVista Toolbox](http://github.com/vistalab) functional analysis
+## ROI creation
+- [makeROIdiskGray.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/makeROIdiskGray.m) creates an ROI in the grey matter
+- [load_and_save_volume_ROIs.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/load_and_save_volume_ROIs.m) transfers all ROIs into the folders with the experimental data to easily retrieve them for the analysis of experiment 2 and 3
+- [roi_size_emoji.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/roi_size_emoji.m) calculates size of ROI for each participant
 
 ## Behavioral Analyses 
-- [final_behavior_exp1_time.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/final_behavior_exp1_time.m) calculates performance (hit rate and 
+- [final_behavior_exp1_time.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/final_behavior_exp1_time.m) calculates performance (hit rate and reaction time for each condition in experiment 1 and compares them)
+- [final_behavior_exp2_time.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/final_behavior_exp2_time.m) calculates performance (hit rate and reaction time for each condition in experiment 2 and compares them)
+- [final_behavior_exp3_time.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/final_behavior_exp2_time.m) calculates performance (hit rate and reaction time for each condition in experiment 3 and compares them)
 ## Univariate Analyses:
 ### Exp 2: fMRI adaptation
-- [extract_betas_adaptation_merged.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/extract_betas_adaptation_merged.m)
-- [extract_betas_adaptation_merged_postHoc.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/extract_betas_adaptation_merged_postHoc.m)
+- [extract_betas_adaptation_merged.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/extract_betas_adaptation_merged.m) calculates % of BOLD signal change for each ROI, participant and condition; runs a repeated measure ANOVA with 2 Factors (Reptition: repeated vs. non-repeated trials, Stimulus: emojis, text, mixed)
+- [extract_betas_adaptation_merged_postHoc.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/extract_betas_adaptation_merged_postHoc.m) runs a tukey-kramer post-hoc test on the univarate analyses of experiment 3 
+
 ### Exp 3: reading vs. color judgement
 - [extract_betas_emoji_noCongruence.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/extract_betas_adaptation_merged.m)
-retrieves betas for each ROI and participant; runs a repeated measure ANOVA with 2 Factors (Task: reading vs. color judgement, Stimulus: emojis vs. text)
+calculates % of BOLD signal change for each ROI, participant and condition; runs a repeated measure ANOVA with 2 Factors (Task: reading vs. color judgement, Stimulus: emojis vs. text)
 - [extract_betas_emoji_noCongruence_postHoc.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/extract_betas_emoji_noCongruence_postHoc.m)
 runs a tukey-kramer post-hoc test on the univarate analyses of experiment 3 
 
