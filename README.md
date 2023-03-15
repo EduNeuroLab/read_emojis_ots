@@ -52,5 +52,8 @@ For this analysis we will not use the mixed condition. Each RDM is calculated fo
 Each RDM is calculated for one subject at a time and later merged into an mean RDM. After calculating the RDM we will run WTA-classifiers decoding task
 and stimulus.Here again, WTA-classifier performances will be calculated for each subject and then averaged across all subjects. Finally, we test WTA-classifier performance against chance compare the performance for stimulus and task to one another.
 ### Cross-experimental RSA Exp 2 and Exp 3
--[MVPA_wrapper_eexp2and3_averagedruns](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/MVPA_wrapper_exp2and3_averageruns.m) RSA for experiment 2 and 3. We take runs from both exeriments for this analysis and calculate an RSM for an ROI, contrasting MVPs of different stimuli (emoji
+- [MVPA_wrapper_eexp2and3_averagedruns](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/MVPA_wrapper_exp2and3_averageruns.m) RSA for experiment 2 and 3. We take runs from both exeriments for this analysis and calculate an RSM for an ROI, contrasting MVPs of different stimuli (emoji
 %vs. text) and task/paradigm (reading vs.color judgement vs Black/White judgement). Each RDM is calculated for one subject at a time and later merged into an mean RDM
+
+###Neccessary functions for running the RSA wrappers: 
+
