@@ -41,9 +41,9 @@ calculates % of BOLD signal change for each ROI, participant and condition; runs
 - [extract_betas_emoji_noCongruence_postHoc.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/extract_betas_emoji_noCongruence_postHoc.m)
 runs a tukey-kramer post-hoc test on the univarate analyses of experiment 3 
 
-## ROI creation
-- [load_and_save_volume_ROIs.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/load_and_save_volume_ROIs.m)
-- [makeROIdiskGray.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/makeROIdiskGray.m)
-- [roi_size_emoji.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/roi_size_emoji.m)
 ## Multivariate Analyses
+- [MVPA_adapt_6cond_leave1runout.m] (https://github.com/EduNeuroLab/read_emojis_ots/blob/main/MVPA_wrapper_adapt_6cond_leave1runout.asv) RSA for experiment 2  fMRI adaptation calculates RSM for an ROI, contrasting MVPs of different stimuli (emoji vs. text vs. mixed) and repetition (repeated vs. non-repeated). Each RDM is calculated for one subject at a time and later merged into a mean RDM
+- [MVPA_adapt_4cond_leave1runout.m] (https://github.com/EduNeuroLab/read_emojis_ots/blob/main/Mvpa_wrapper_adapt_4cond_leave1runout.asv) RSA for experiment 2  fMRI adaptation calculates RSM for an ROI, contrasting MVPs of different stimuli (emojivs. text) and repetition (repeated vs. non-repeated) 
+For this analysis we will not use the mixed condition. Each RDM is calculated for one subject at a time and later merged into an mean RDM.After calculating the RDM we will run WTA-classifiers decoding repetition and stimulus. Here again, WTA-classifier performances will be calculated for each subject and then averaged across all subjects. Finally, we test WTA-classifier performance against chance compare the
+%performance for stimulus and repetition to one another
 
