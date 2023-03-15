@@ -42,7 +42,9 @@ calculates % of BOLD signal change for each ROI, participant and condition; runs
 runs a tukey-kramer post-hoc test on the univarate analyses of experiment 3 
 
 ## Multivariate Analyses
-- [MVPA_wrapper_adapt_6cond_leave1runout.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/MVPA_wrapper_adapt_6cond_leave1runout.asv) RSA for experiment 2  fMRI adaptation calculates RSM for an ROI, contrasting MVPs of different stimuli (emoji vs. text vs. mixed) and repetition (repeated vs. non-repeated). Each RDM is calculated for one subject at a time and later merged into a mean RDM
+### RSA Exp2 fMRI adaptation 6 conditions
+- [MVPA_wrapper_adapt_6cond_leave1runout.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/MVPA_wrapper_adapt_6cond_leave1runout.asv) This isRSA for experiment 2  fMRI adaptation calculates RSM for an ROI, contrasting MVPs of different stimuli (emoji vs. text vs. mixed) and repetition (repeated vs. non-repeated). Each RDM is calculated for one subject at a time and later merged into a mean RDM
+### RSA Exp2 fMRI adaptation 4 conditions
 - [MVPA_wrapper_adapt_4cond_leave1runout.m](https://github.com/EduNeuroLab/read_emojis_ots/blob/main/Mvpa_wrapper_adapt_4cond_leave1runout.asv) RSA for experiment 2  fMRI adaptation calculates RSM for an ROI, contrasting MVPs of different stimuli (emojivs. text) and repetition (repeated vs. non-repeated) 
 For this analysis we will not use the mixed condition. Each RDM is calculated for one subject at a time and later merged into an mean RDM.After calculating the RDM we will run WTA-classifiers decoding repetition and stimulus. Here again, WTA-classifier performances will be calculated for each subject and then averaged across all subjects. Finally, we test WTA-classifier performance against chance compare the
 %performance for stimulus and repetition to one another
